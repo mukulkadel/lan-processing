@@ -48,4 +48,4 @@ if __name__ == "__main__":
         c.close()
         print("done.")
         break
-    s.close()
+    s.shutdown()
