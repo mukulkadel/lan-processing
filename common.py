@@ -6,7 +6,7 @@ def func(arr):
     arr = list(arr)
     a = []
     for x in arr:
-        a.append(sqrt(x*x*x+x*x+x/2))
+        a.append(math.sqrt(x*x*x+x*x+x/2))
     for i in range(len(arr)):
         arr[i] = a[i] * arr[i]
     return sum(arr)
