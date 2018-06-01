@@ -30,8 +30,8 @@ if __name__ == "__main__":
     s = socket.socket()
     s.connect(("8.8.8.8",53))
     slave_ip = s.getsockname()[0]
-    
-    s.bind((server_ip,port))
+
+    s.bind((slave_ip,port))
     s.listen(5)
     print("Ready to serve master.")
 
