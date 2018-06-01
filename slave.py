@@ -16,7 +16,7 @@ def get_data(s):
         l -= len(tmp)
 
     tmp = b"".join(data)
-    data = array.array('d',[])
+    data = array.array('q',[])
     data.frombytes(tmp)
     return data.tolist()
 
