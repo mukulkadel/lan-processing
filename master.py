@@ -23,7 +23,7 @@ def get_data(s):
     return float(data)
 
 def get_result(arr):
-    arr = array.array('d',arr)
+    arr = array.array('q',arr)
     s = socket.socket()
     s.connect((slave_ip,port))
     tmp = arr.tobytes()
@@ -35,7 +35,7 @@ def get_result(arr):
     return result
 
 if __name__=="__main__":
-    arr = list(range(100000))
+    arr = list(range(1000000))
 
     #for verification
     old_t = time.time()
