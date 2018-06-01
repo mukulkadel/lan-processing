@@ -16,7 +16,7 @@ def get_data(s):
         l -= len(tmp)
 
     tmp = b"".join(data)
-    data = array.array('l',[])
+    data = array.array('d',[])
     data.frombytes(tmp)
     return data.tolist()
 
@@ -46,4 +46,4 @@ if __name__ == "__main__":
         c.close()
         print("done.")
         break
-    s.shutdown()
+    s.shutdown(socket.SHUT_RDWR)
