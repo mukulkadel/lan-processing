@@ -3,6 +3,7 @@
 port = 6994
 
 def func(arr):
+    arr = list(arr)
     a = []
     for x in arr:
         a.append(x*x*x+x/2)
