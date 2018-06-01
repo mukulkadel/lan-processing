@@ -1,7 +1,7 @@
 import socket
 import array
 
-server_ip = "127.0.0.1"
+server_ip = "192.168.43.43"
 port = 6994
 
 def get_data(s):

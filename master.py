@@ -2,7 +2,7 @@ import socket
 import time
 import array
 
-slave_ip = "127.0.0.1"
+slave_ip = "192.168.43.49"
 port = 6994
 
 def get_data(s):
