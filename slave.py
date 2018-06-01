@@ -1,9 +1,6 @@
 import socket
 import array
 
-
-port = 6994
-
 def get_data(s):
     data = []
     l = int(s.recv(40))
@@ -30,10 +27,13 @@ if __name__ == "__main__":
     s = socket.socket()
     s.connect(("8.8.8.8",53))
     slave_ip = s.getsockname()[0]
+    s.close()
+    port = 6994
 
+    s = socket.socket()
     s.bind((slave_ip,port))
     s.listen(5)
-    print("Ready to serve master.")
+    print("Ready to serve master at {}.".format((slave_ip,port)))
 
     while True:
         c,addr = s.accept()
