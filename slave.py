@@ -1,5 +1,5 @@
-import socket,array
-import multiprocessing as mp
+import socket
+import array
 
 server_ip = "127.0.0.1"
 port = 6994

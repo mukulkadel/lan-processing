@@ -1,4 +1,6 @@
-import socket,time,array
+import socket
+import time
+import array
 
 slave_ip = "127.0.0.1"
 port = 6994
