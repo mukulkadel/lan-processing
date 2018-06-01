@@ -1,9 +1,9 @@
 import socket
 import time
 import array
+from common import *
 
 slave_ip = "192.168.43.49"
-port = 6994
 
 def get_data(s):
     data = []
@@ -23,7 +23,7 @@ def get_data(s):
     return float(data)
 
 def get_result(arr):
-    arr = array.array('l',arr)
+    arr = array.array('d',arr)
     s = socket.socket()
     s.connect((slave_ip,port))
     tmp = arr.tobytes()
@@ -39,7 +39,7 @@ if __name__=="__main__":
 
     #for verification
     old_t = time.time()
-    print("Master result: {}".format(sum(arr)))
+    print("Master result: {}".format(func(arr)))
     new_t = time.time()
     print("Normal way, took: {}".format(new_t-old_t))
 

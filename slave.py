@@ -1,5 +1,6 @@
 import socket
 import array
+from common import *
 
 def get_data(s):
     data = []
@@ -19,9 +20,6 @@ def get_data(s):
     data.frombytes(tmp)
     return data.tolist()
 
-def func(data):
-    s = sum(data)
-    return s
 
 if __name__ == "__main__":
     s = socket.socket()
