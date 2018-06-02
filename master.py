@@ -3,7 +3,7 @@ import time
 import array
 from common import *
 
-slave_ip = "192.168.43.49"
+slave_ip = "192.168.0.5"
 
 def get_data(s):
     data = []
@@ -35,7 +35,7 @@ def get_result(arr):
     return result
 
 if __name__=="__main__":
-    arr = list(range(1000000))
+    arr = list(range(10000000))
 
     #for verification
     old_t = time.time()
